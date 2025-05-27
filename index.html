@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <title>GS Full Services - Contractor Work</title>
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/fontawesome.css" />
-  <link rel="stylesheet" href="assets/css/templatemo-572-designer.css" />
-  <link rel="stylesheet" href="assets/css/owl.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-572-designer.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <style>
     :root {
       --navy: #0a1d3a;
     }
 
-    em,
-    .text-danger,
-    .highlight,
-    .red,
-    h2 em {
+    em, .text-danger, .highlight, .red, h2 em {
       color: var(--navy) !important;
       font-style: normal;
       font-weight: bold;
@@ -75,183 +71,191 @@
       padding-top: 60px;
     }
 
-    /* Imagen galería más grande */
-    #gallery img {
-      max-width: 80%; /* imagen más grande */
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    .gallery-item {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-in-out;
     }
 
-    /* Texto trabajos recientes centrado y compacto */
-    .right-content ul li {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .right-content ul li ul.info li {
-      margin-bottom: 5px;
+    .gallery-item.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <header id="top">
-    <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
-      <div class="container">
-        <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#top">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Sobre Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Proyectos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
 
-  <div class="main-banner change-name">
+<header id="top">
+  <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="header-text">
-            <h2><em>GS Full Services</em> - Servicios Profesionales </h2>
-            <div class="white-button">
-              <a href="#projects">Ver Proyectos</a>
-            </div>
-          </div>
+      <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#top">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="main-banner change-name">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header-text">
+          <h2><em>GS Full Services</em> - Servicios Profesionales </h2>
+          <div class="white-button"><a href="#projects">Ver Proyectos</a></div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <section id="about" class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mb-4"><em>Sobre Nosotros</em></h2>
-          <p>
-            GS Full Services cuenta con más de 10 años de experiencia ofreciendo soluciones integrales en el sur de la Florida. Nos especializamos en electricidad, plomería, pintura, drywall, ebanistería, remodelaciones en general, pisos laminados, ensamblaje de muebles y servicios de handyman. Nuestro compromiso es brindar calidad, puntualidad y resultados que superen las expectativas de nuestros clientes.
-          </p>
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mb-4"><em>Sobre Nosotros</em></h2>
+        <p>GS Full Services cuenta con más de 10 años de experiencia ofreciendo soluciones integrales en el sur de la Florida. Nos especializamos en electricidad, plomería, pintura, drywall, ebanistería, remodelaciones en general, pisos laminados, ensamblaje de muebles y servicios de handyman. Nuestro compromiso es brindar calidad, puntualidad y resultados que superen las expectativas de nuestros clientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="explore-work" id="projects">
+  <div class="container expanded">
+    <div class="row text-center mb-4">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Algunos de nuestros <em>trabajos recientes</em></h2>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="explore-work" id="projects">
-    <div class="container expanded">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Algunos de nuestros <em>trabajos recientes</em></h2>
-          </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="left-image">
+          <img src="assets/images/project-1.jpeg" alt="Proyecto 1" class="img-fluid" style="width: 70%;">
         </div>
-        <div class="col-lg-6">
-          <div class="left-image">
-            <img src="assets/images/project-1.jpeg" alt="Proyecto 1" />
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="right-content">
-            <ul>
-              <li>
-                <h4>Remodelación de Cocina</h4>
-                <ul class="info">
-                  <li>
-                    <span class="float-start">Enero 2025</span>
-                    <h6>Proyecto en Miami, FL</h6>
-                  </li>
-                  <li><em>Modernización completa de cocina incluyendo gabinetes, encimeras y electricidad.</em></li>
-                </ul>
-              </li>
-              <li>
-                <h4>Renovación de Baño</h4>
-                <ul class="info">
-                  <li>
-                    <span class="float-start">Diciembre 2024</span>
-                    <h6>Proyecto en Hialeah, FL</h6>
-                  </li>
-                  <li><em>Rediseño de baño con azulejos nuevos, plomería y acabados premium.</em></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="right-content">
+          <ul>
+            <li>
+              <h4>Remodelación de Consultorio</h4>
+              <ul class="info">
+                <li><span class="float-start">Mayo 2025</span><h6>Proyecto en Kendall, FL</h6></li>
+                <li><em>Actualización total de espacio médico con nuevos acabados, divisiones y sistemas eléctricos.</em></li>
+              </ul>
+            </li>
+            <li>
+              <h4>Remodelación de Cocina</h4>
+              <ul class="info">
+                <li><span class="float-start">Marzo 2025</span><h6>Proyecto en Miami, FL</h6></li>
+                <li><em>Modernización completa de cocina incluyendo gabinetes, encimeras y electricidad.</em></li>
+              </ul>
+            </li>
+            <li>
+              <h4>Renovación de Baño</h4>
+              <ul class="info">
+                <li><span class="float-start">Marzo 2025</span><h6>Proyecto en Hialeah, FL</h6></li>
+                <li><em>Rediseño de baño con azulejos nuevos, plomería y acabados premium.</em></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="gallery" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4"><em>Galería</em></h2>
-      <img src="assets/images/project-1.jpeg" alt="Proyecto Remodelación de Cocina" />
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <p>Contáctanos al <strong>(954) 520-9281</strong></p>
-          <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
-        </div>
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2><em>Galería</em></h2>
       </div>
     </div>
-  </footer>
+    <div class="row g-4">
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/gallery-1.jpeg" class="img-fluid rounded shadow" alt="Galería 1">
+        <p class="text-center mt-2">Título del trabajo</p>
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/gallery-2.jpeg" class="img-fluid rounded shadow" alt="Galería 2">
+        <p class="text-center mt-2">Título del trabajo</p>
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/gallery-3.jpeg" class="img-fluid rounded shadow" alt="Galería 3">
+        <p class="text-center mt-2">Título del trabajo</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    setTimeout(function () {
-      $('.loader').fadeToggle();
-    }, 1500);
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p>Contáctanos al <strong>(954) 520-9281</strong></p>
+        <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/popup.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+  setTimeout(function () {
+    $('.loader').fadeToggle();
+  }, 1500);
 
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop() > 50) {
-        $(".main-navigation").removeClass("transparent").addClass("solid");
-      } else {
-        $(".main-navigation").removeClass("solid").addClass("transparent");
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
       }
     });
-  </script>
+  });
+
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 50) {
+      $(".main-navigation").removeClass("transparent").addClass("solid");
+    } else {
+      $(".main-navigation").removeClass("solid").addClass("transparent");
+    }
+  });
+
+  // Galería animación
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  galleryItems.forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
 </body>
 </html>
-
 
 
 
