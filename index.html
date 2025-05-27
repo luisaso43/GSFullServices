@@ -78,13 +78,26 @@
       padding-top: 60px;
     }
 
-    /* Tamaño reducido de la imagen del proyecto */
-    .project-image {
-      width: 33%;
+    /* Centrar texto en trabajos recientes */
+    .right-content ul li {
+      text-align: center;
+    }
+
+    /* Estilos para galería */
+    #gallery {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+
+    #gallery .container {
+      text-align: center;
+    }
+
+    #gallery img {
+      max-width: 100%;
       height: auto;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -114,6 +127,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Galería</a>
             </li>
           </ul>
         </div>
@@ -157,16 +173,7 @@
             <h2>Algunos de nuestros <em>trabajos recientes</em></h2>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="left-image">
-            <img
-              src="assets/images/project-1.jpeg"
-              alt="Remodelación de Cocina"
-              class="project-image"
-            />
-          </div>
-        </div>
-        <div class="col-lg-6">
+        <div class="col-lg-12">
           <div class="right-content">
             <ul>
               <li>
@@ -187,6 +194,13 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2 class="mb-4"><em>Galería</em></h2>
+      <img src="assets/images/project-1.jpeg" alt="Remodelación de Cocina" />
     </div>
   </section>
 
