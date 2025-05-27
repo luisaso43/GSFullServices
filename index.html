@@ -22,7 +22,6 @@
       font-weight: bold;
     }
 
-    /* Botón "Ver Proyectos" */
     .white-button a {
       background-color: var(--navy) !important;
       border-color: var(--navy) !important;
@@ -35,7 +34,6 @@
       color: white !important;
     }
 
-    /* Navbar estilo */
     .main-navigation {
       transition: background-color 0.4s ease;
     }
@@ -68,11 +66,9 @@
       color: #555 !important;
     }
 
-    /* Ajuste para que #about quede bien al hacer scroll */
     #about {
-      position: relative;
-      padding-top: 120px;
-      margin-top: -120px;
+      scroll-margin-top: 100px;
+      padding-top: 60px;
     }
   </style>
 </head>
@@ -122,7 +118,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="mb-4"><em>Sobre Nosotros</em></h2>
-        <p>En GS Full Services nos especializamos en ofrecer soluciones integrales de construcción, remodelación y mantenimiento. Con años de experiencia en el área del sur de la Florida, nuestro equipo está comprometido con la excelencia, puntualidad y resultados que superan las expectativas de nuestros clientes.</p>
+        <p>GS Full Services cuenta con más de 10 años de experiencia ofreciendo soluciones integrales en el sur de la Florida. Nos especializamos en electricidad, plomería, pintura, drywall, ebanistería, remodelaciones en general, pisos laminados, ensamblaje de muebles y servicios de handyman. Nuestro compromiso es brindar calidad, puntualidad y resultados que superen las expectativas de nuestros clientes.</p>
       </div>
     </div>
   </div>
@@ -188,16 +184,14 @@
     $('.loader').fadeToggle();
   }, 1500);
 
-  $("a[href^='#']").on('click', function (event) {
-    event.preventDefault();
-    const target = this.getAttribute("href");
-    if (target.length > 1) {
-      $('html, body').animate({
-        scrollTop: $(target).offset().top
-      }, 800);
-    } else {
-      $('html, body').animate({ scrollTop: 0 }, 800);
-    }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 
   $(window).on("scroll", function () {
