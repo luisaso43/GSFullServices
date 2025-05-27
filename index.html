@@ -31,11 +31,13 @@
       color: white !important;
     }
 
-    /* Texto del menú */
+    /* Menú de navegación */
     .navbar-nav .nav-link {
       color: white !important;
       font-weight: 500;
       transition: color 0.3s ease;
+      background: none !important;
+      border: none !important;
     }
 
     .navbar-nav .nav-link:hover,
@@ -43,7 +45,16 @@
       color: #ccc !important;
     }
 
-    .navbar {
+    /* Navbar transparente al inicio */
+    .main-navigation {
+      transition: background-color 0.4s ease;
+    }
+
+    .main-navigation.transparent {
+      background-color: transparent !important;
+    }
+
+    .main-navigation.solid {
       background-color: #1f1f1f !important;
     }
   </style>
@@ -51,7 +62,7 @@
 <body>
 
 <header id="top">
-  <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+  <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
     <div class="container">
       <a class="navbar-brand" href="#top"><img src="assets/images/white-logo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,10 +167,31 @@
 <script src="assets/js/popup.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
-  setTimeout(function(){ $('.loader').fadeToggle(); }, 1500);
-  $("a[href='#top']").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
+  // Ocultar loader si existe
+  setTimeout(function() {
+    $('.loader').fadeToggle();
+  }, 1500);
+
+  // Scroll suave para todos los links internos
+  $("a[href^='#']").on('click', function(event) {
+    event.preventDefault();
+    const target = this.getAttribute("href");
+    if (target.length > 1) {
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 800);
+    } else {
+      $('html, body').animate({ scrollTop: 0 }, 800);
+    }
+  });
+
+  // Navbar cambia de transparente a sólido al hacer scroll
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 50) {
+      $(".main-navigation").removeClass("transparent").addClass("solid");
+    } else {
+      $(".main-navigation").removeClass("solid").addClass("transparent");
+    }
   });
 </script>
 
