@@ -1,207 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>GS Full Services - Contractor Work</title>
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/fontawesome.css" />
-  <link rel="stylesheet" href="assets/css/templatemo-572-designer.css" />
-  <link rel="stylesheet" href="assets/css/owl.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-572-designer.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
       --navy: #0a1d3a;
     }
-
     em, .text-danger, .highlight, .red, h2 em {
       color: var(--navy) !important;
       font-style: normal;
       font-weight: bold;
     }
-
     .white-button a {
       background-color: var(--navy) !important;
       border-color: var(--navy) !important;
       color: white !important;
     }
-
     .white-button a:hover {
       background-color: #081730 !important;
       border-color: #081730 !important;
-      color: white !important;
     }
-
     .main-navigation {
       transition: background-color 0.4s ease;
     }
-
     .main-navigation.transparent {
-      background-color: rgba(255, 255, 255, 0.85) !important;
+      background-color: rgba(255, 255, 255, 0.85);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-
     .main-navigation.solid {
       background-color: white !important;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     .navbar-brand {
       color: var(--navy) !important;
       font-weight: 700;
       font-size: 1.5rem;
       letter-spacing: 2px;
     }
-
     .navbar-nav .nav-link {
       color: var(--navy) !important;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
-
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link:focus {
-      color: #555 !important;
-    }
-
     #about {
       scroll-margin-top: 100px;
       padding-top: 60px;
     }
-
-    /* Proyectos centrados y moderno */
-    #projects .project-list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    #projects .project-item {
-      background: #f8f9fa;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgb(10 29 58 / 0.1);
+    .gallery-image {
       width: 100%;
+      margin-bottom: 20px;
+      transition: transform 0.4s ease;
+    }
+    .gallery-image:hover {
+      transform: scale(1.03);
+    }
+    .gallery-title {
       text-align: center;
-      transition: transform 0.3s ease;
-      cursor: default;
-    }
-
-    #projects .project-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgb(10 29 58 / 0.2);
-    }
-
-    #projects .project-item h4 {
-      margin-bottom: 0.3rem;
-      color: var(--navy);
-    }
-
-    #projects .project-item .date-location {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 0.7rem;
+      margin-top: 10px;
       font-weight: 500;
-    }
-
-    #projects .project-item p.description {
-      font-style: italic;
-      color: #333;
-      margin: 0;
-    }
-
-    /* Galería */
-    #gallery {
-      scroll-margin-top: 100px;
-      padding: 60px 0;
-      background-color: #f1f5f9;
-    }
-
-    #gallery .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgb(10 29 58 / 0.1);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-      cursor: pointer;
-      background: white;
-    }
-
-    #gallery .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgb(10 29 58 / 0.25);
-    }
-
-    #gallery .gallery-item img {
-      width: 100%;
-      display: block;
-      border-radius: 8px 8px 0 0;
-    }
-
-    #gallery .caption {
-      padding: 0.75rem 1rem;
-      text-align: center;
-      font-weight: 600;
-      color: var(--navy);
-      background-color: #ffffffdd;
-      border-radius: 0 0 8px 8px;
-      user-select: none;
-    }
-
-    /* Ajustes para navbar */
-    .navbar-nav .nav-link.active {
-      font-weight: 700;
-      color: var(--navy) !important;
-    }
-
-    footer {
-      background: #f8f9fa;
-    }
-
-    footer a.instagram-link {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 0.5rem;
-      color: var(--navy);
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1rem;
-      gap: 0.5rem;
-    }
-
-    footer a.instagram-link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
 <header id="top">
-  <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
+  <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
+        </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#top">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery">Galería</a>
+            <a class="nav-link" href="https://www.instagram.com/gsfullservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -225,105 +112,106 @@
 </div>
 
 <section id="about" class="py-5 bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="mb-4"><em>Sobre Nosotros</em></h2>
-        <p>GS Full Services cuenta con más de 10 años de experiencia ofreciendo soluciones integrales en el sur de la Florida. Nos especializamos en electricidad, plomería, pintura, drywall, ebanistería, remodelaciones en general, pisos laminados, ensamblaje de muebles y servicios de handyman. Nuestro compromiso es brindar calidad, puntualidad y resultados que superen las expectativas de nuestros clientes.</p>
-      </div>
-    </div>
+  <div class="container text-center">
+    <h2 class="mb-4"><em>Sobre Nosotros</em></h2>
+    <p>GS Full Services cuenta con más de 10 años de experiencia ofreciendo soluciones integrales en el sur de la Florida. Nos especializamos en electricidad, plomería, pintura, drywall, ebanistería, remodelaciones en general, pisos laminados, ensamblaje de muebles y servicios de handyman.</p>
   </div>
 </section>
 
 <section id="projects" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-5"><em>Proyectos Recientes</em></h2>
-    <div class="project-list">
-      <div class="project-item">
-        <h4>Remodelación de Consultorio</h4>
-        <div class="date-location">Mayo 2025 - Kendall, FL</div>
-        <p class="description">Renovación completa del consultorio médico, incluyendo nuevas instalaciones eléctricas, pintura y pisos laminados de alta resistencia.</p>
+  <div class="container text-center">
+    <h2 class="mb-5"><em>Proyectos Recientes</em></h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <div class="p-3 border rounded shadow-sm">
+          <h4>Remodelación de Consultorio</h4>
+          <p class="mb-1"><strong>Ubicación:</strong> Kendall, FL</p>
+          <p>Proyecto completo de renovación de consultorio médico incluyendo pintura, pisos y mobiliario.</p>
+        </div>
       </div>
-      <div class="project-item">
-        <h4>Remodelación de Cocina</h4>
-        <div class="date-location">Marzo 2025 - Miami, FL</div>
-        <p class="description">Modernización total con gabinetes personalizados, encimeras de cuarzo y actualización de sistemas eléctricos.</p>
+      <div class="col-md-6 mb-4">
+        <div class="p-3 border rounded shadow-sm">
+          <h4>Remodelación de Cocina</h4>
+          <p class="mb-1"><strong>Ubicación:</strong> Miami, FL</p>
+          <p>Renovación total con instalación de gabinetes nuevos, backsplash y modernización eléctrica.</p>
+        </div>
       </div>
-      <div class="project-item">
-        <h4>Remodelación de Baño</h4>
-        <div class="date-location">Marzo 2025 - Miami, FL</div>
-        <p class="description">Reestructuración y diseño nuevo de baño, instalación de azulejos, accesorios y mejoras en plomería.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Galería <em>de Trabajos</em></h2>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4 gallery-item">
-        <img src="assets/images/gallery-1.jpeg" alt="Trabajo 1" />
-        <div class="caption">Título del trabajo</div>
-      </div>
-      <div class="col-md-4 gallery-item">
-        <img src="assets/images/gallery-2.jpeg" alt="Trabajo 2" />
-        <div class="caption">Título del trabajo</div>
-      </div>
-      <div class="col-md-4 gallery-item">
-        <img src="assets/images/gallery-3.jpeg" alt="Trabajo 3" />
-        <div class="caption">Título del trabajo</div>
+      <div class="col-md-6 mb-4">
+        <div class="p-3 border rounded shadow-sm">
+          <h4>Remodelación de Baño</h4>
+          <p class="mb-1"><strong>Ubicación:</strong> Miami, FL</p>
+          <p>Actualización completa de baño con nuevas baldosas, lavamanos y accesorios modernos.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="py-4 text-center">
+<section id="gallery" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5"><em>Galería de Trabajos</em></h2>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="assets/images/gallery-1.jpeg" alt="Trabajo 1" class="gallery-image">
+        <p class="gallery-title">Trabajo de pintura profesional</p>
+      </div>
+      <div class="col-md-4">
+        <img src="assets/images/gallery-2.jpeg" alt="Trabajo 2" class="gallery-image">
+        <p class="gallery-title">Remodelación de cocina</p>
+      </div>
+      <div class="col-md-4">
+        <img src="assets/images/gallery-3.jpeg" alt="Trabajo 3" class="gallery-image">
+        <p class="gallery-title">Instalación de puertas de vidrio para baño</p>
+      </div>
+      <div class="col-md-4">
+        <img src="assets/images/gallery-4.jpeg" alt="Trabajo 4" class="gallery-image">
+        <p class="gallery-title">Pintura exterior de casa</p>
+      </div>
+      <div class="col-md-4">
+        <img src="assets/images/gallery-5.jpeg" alt="Trabajo 5" class="gallery-image">
+        <p class="gallery-title">Instalación de luces de Navidad</p>
+      </div>
+      <div class="col-md-4">
+        <img src="assets/images/gallery-6.jpeg" alt="Trabajo 6" class="gallery-image">
+        <p class="gallery-title">Luces de Navidad</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-4">
   <div class="container">
     <p>Contáctanos al <strong>(954) 520-9281</strong></p>
     <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
-    <a class="instagram-link" href="https://www.instagram.com/gsfullservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram GS Full Services">
-      <i class="fab fa-instagram" style="font-size: 1.4rem;"></i> Síguenos en Instagram
-    </a>
   </div>
 </footer>
 
 <script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/animation.js"></script>
-<script src="assets/js/imagesloaded.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script>
-  // Cambiar fondo navbar al hacer scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.main-navigation');
-    if(window.scrollY > 10) {
-      nav.classList.remove('transparent');
-      nav.classList.add('solid');
-    } else {
-      nav.classList.add('transparent');
-      nav.classList.remove('solid');
-    }
-  });
-
-  // Scroll suave para enlaces ancla
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if(target) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
+
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.main-navigation');
+    if (window.scrollY > 50) {
+      nav.classList.remove('transparent');
+      nav.classList.add('solid');
+    } else {
+      nav.classList.remove('solid');
+      nav.classList.add('transparent');
+    }
+  });
 </script>
+
 </body>
 </html>
-
-
 
 
