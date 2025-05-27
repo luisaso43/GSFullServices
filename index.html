@@ -2,123 +2,101 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GS Full Services - Contractor Work</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-572-designer.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <style>
     :root {
       --navy: #0a1d3a;
     }
 
-    em, .text-danger, .highlight, .red, h2 em {
-      color: var(--navy) !important;
-      font-style: normal;
-      font-weight: bold;
+    body {
+      scroll-behavior: smooth;
     }
 
-    .white-button a {
-      background-color: var(--navy) !important;
-      border-color: var(--navy) !important;
-      color: white !important;
-    }
-
-    .white-button a:hover {
-      background-color: #081730 !important;
-      border-color: #081730 !important;
-      color: white !important;
-    }
-
-    .main-navigation {
-      transition: background-color 0.4s ease;
-    }
-
-    .main-navigation.transparent {
-      background-color: rgba(255, 255, 255, 0.85) !important;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    .main-navigation.solid {
-      background-color: white !important;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    .navbar {
+      transition: background-color 0.3s ease;
     }
 
     .navbar-brand {
       color: var(--navy) !important;
       font-weight: 700;
       font-size: 1.5rem;
-      letter-spacing: 2px;
     }
 
     .navbar-nav .nav-link {
       color: var(--navy) !important;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
 
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link:focus {
-      color: #555 !important;
+    .navbar.scrolled {
+      background-color: white !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     #about {
-      scroll-margin-top: 100px;
-      padding-top: 60px;
+      padding-top: 100px;
+      margin-top: -100px;
+    }
+
+    em {
+      color: var(--navy);
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    .white-button a {
+      background-color: var(--navy);
+      border-color: var(--navy);
+      color: white !important;
+    }
+
+    .white-button a:hover {
+      background-color: #081730;
+      border-color: #081730;
     }
   </style>
 </head>
 <body>
 
-<header id="top">
-  <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
-    <div class="container">
-      <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#top">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Proyectos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<div class="main-banner change-name">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="header-text">
-          <h2><em>GS Full Services</em> - Servicios Profesionales de Contratista General</h2>
-          <div class="white-button">
-            <a href="#projects">Ver Proyectos</a>
-          </div>
-        </div>
-      </div>
+    <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#top">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
+
+<header id="top" class="main-banner">
+  <div class="container text-center py-5">
+    <h2><em>GS Full Services</em> - Servicios Profesionales de Contratista General</h2>
+    <div class="white-button mt-3">
+      <a href="#projects">Ver Proyectos</a>
+    </div>
+  </div>
+</header>
 
 <section id="about" class="py-5 bg-light">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="mb-4"><em>Sobre Nosotros</em></h2>
-        <p>GS Full Services cuenta con más de 10 años de experiencia ofreciendo soluciones integrales en el sur de la Florida. Nos especializamos en electricidad, plomería, pintura, drywall, ebanistería, remodelaciones en general, pisos laminados, ensamblaje de muebles y servicios de handyman. Nuestro compromiso es brindar calidad, puntualidad y resultados que superen las expectativas de nuestros clientes.</p>
+        <p>
+          En GS Full Services contamos con más de 10 años de experiencia ofreciendo servicios de alta calidad en el <strong>sur de la Florida</strong>.
+          Estamos especializados en <strong>electricidad</strong>, <strong>plomería</strong>, <strong>pintura</strong>, <strong>drywall</strong>,
+          <strong>ebanistería</strong>, <strong>remodelaciones en general</strong>, <strong>pisos laminados</strong>, <strong>ensamblaje de muebles</strong> y <strong>servicios de handyman</strong>.
+        </p>
       </div>
     </div>
   </div>
@@ -134,7 +112,7 @@
       </div>
       <div class="col-lg-6">
         <div class="left-image">
-          <img src="assets/images/project-1.jpg" alt="Proyecto 1">
+          <img src="assets/images/project-1.jpg" alt="Remodelación de Cocina" class="img-fluid">
         </div>
       </div>
       <div class="col-lg-6">
@@ -147,13 +125,6 @@
                 <li><em>Modernización completa de cocina incluyendo gabinetes, encimeras y electricidad.</em></li>
               </ul>
             </li>
-            <li>
-              <h4>Renovación de Baño</h4>
-              <ul class="info">
-                <li><span class="float-start">Diciembre 2024</span><h6>Proyecto en Hialeah, FL</h6></li>
-                <li><em>Rediseño de baño con azulejos nuevos, plomería y acabados premium.</em></li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>
@@ -161,50 +132,34 @@
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <p>Contáctanos al <strong>954 520 9281</strong></p>
-        <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
-      </div>
-    </div>
+<footer class="py-4 bg-light">
+  <div class="container text-center">
+    <p>Contáctanos al <strong>954 520 9281</strong></p>
+    <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
   </div>
 </footer>
 
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/tabs.js"></script>
-<script src="assets/js/popup.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  setTimeout(function () {
-    $('.loader').fadeToggle();
-  }, 1500);
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 50) {
-      $(".main-navigation").removeClass("transparent").addClass("solid");
+      $(".navbar").addClass("scrolled");
     } else {
-      $(".main-navigation").removeClass("solid").addClass("transparent");
+      $(".navbar").removeClass("scrolled");
     }
   });
-</script>
 
-</body>
-</html>
+  $("a[href^='#']").on('click', function(event) {
+    event.preventDefault();
+    const target = this.getAttribute("href");
+    if (target.length > 1) {
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 400); // velocidad rápida
+    } else {
+      $('html, body').animate({ scrollTop: 0
+
 
 
 
