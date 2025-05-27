@@ -57,7 +57,7 @@
       color: #000 !important; /* negro para hover */
     }
 
-    /* Navbar transparente al inicio (ahora blanco semitransparente para que se vea logo azul) */
+    /* Navbar transparente al inicio (ahora blanco semitransparente para que se vea texto azul) */
     .main-navigation {
       transition: background-color 0.4s ease;
     }
@@ -79,15 +79,31 @@
     .main-navigation.solid .navbar-nav .nav-link:focus {
       color: #ccc !important;
     }
+
+    /* Texto del navbar en lugar de logo */
+    .navbar-brand {
+      color: #0a1d3a !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    /* Ajuste para que #about quede con offset y no tapado por navbar */
+    #about {
+      position: relative;
+      padding-top: 80px;
+      margin-top: -80px;
+    }
   </style>
 </head>
 <body>
   <header id="top">
     <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
       <div class="container">
-        <a class="navbar-brand" href="#top"
-          ><img src="assets/images/white-logo.png" alt="Logo GS Full Services" />
-        </a>
+        <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -216,7 +232,7 @@
       $('.loader').fadeToggle();
     }, 1500);
 
-    // Quitamos la animación jQuery para scroll, porque el CSS hace scroll suave nativo
+    // Scroll suave nativo ya activado en CSS
 
     // Navbar cambia de transparente (claro) a sólido (negro) al hacer scroll
     $(window).on('scroll', function () {
