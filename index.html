@@ -3,10 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
   <title>GS Full Services - Contractor Work</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/fontawesome.css" />
@@ -78,26 +75,25 @@
       padding-top: 60px;
     }
 
-    /* Centrar texto en trabajos recientes */
-    .right-content ul li {
-      text-align: center;
-    }
-
-    /* Estilos para galería */
-    #gallery {
-      padding: 60px 0;
-      background-color: #f8f9fa;
-    }
-
-    #gallery .container {
-      text-align: center;
-    }
-
+    /* Imagen galería más grande */
     #gallery img {
-      max-width: 100%;
+      max-width: 80%; /* imagen más grande */
       height: auto;
       border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Texto trabajos recientes centrado y compacto */
+    .right-content ul li {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .right-content ul li ul.info li {
+      margin-bottom: 5px;
     }
   </style>
 </head>
@@ -128,9 +124,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#projects">Proyectos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">Galería</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -142,7 +135,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="header-text">
-            <h2><em>GS Full Services</em> - Servicios Profesionales</h2>
+            <h2><em>GS Full Services</em> - Servicios Profesionales </h2>
             <div class="white-button">
               <a href="#projects">Ver Proyectos</a>
             </div>
@@ -173,20 +166,31 @@
             <h2>Algunos de nuestros <em>trabajos recientes</em></h2>
           </div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-6">
+          <div class="left-image">
+            <img src="assets/images/project-1.jpeg" alt="Proyecto 1" />
+          </div>
+        </div>
+        <div class="col-lg-6">
           <div class="right-content">
             <ul>
               <li>
                 <h4>Remodelación de Cocina</h4>
                 <ul class="info">
-                  <li><span class="float-start">Enero 2025</span><h6>Proyecto en Miami, FL</h6></li>
+                  <li>
+                    <span class="float-start">Enero 2025</span>
+                    <h6>Proyecto en Miami, FL</h6>
+                  </li>
                   <li><em>Modernización completa de cocina incluyendo gabinetes, encimeras y electricidad.</em></li>
                 </ul>
               </li>
               <li>
                 <h4>Renovación de Baño</h4>
                 <ul class="info">
-                  <li><span class="float-start">Diciembre 2024</span><h6>Proyecto en Hialeah, FL</h6></li>
+                  <li>
+                    <span class="float-start">Diciembre 2024</span>
+                    <h6>Proyecto en Hialeah, FL</h6>
+                  </li>
                   <li><em>Rediseño de baño con azulejos nuevos, plomería y acabados premium.</em></li>
                 </ul>
               </li>
@@ -197,10 +201,10 @@
     </div>
   </section>
 
-  <section id="gallery">
-    <div class="container">
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container text-center">
       <h2 class="mb-4"><em>Galería</em></h2>
-      <img src="assets/images/project-1.jpeg" alt="Remodelación de Cocina" />
+      <img src="assets/images/project-1.jpeg" alt="Proyecto Remodelación de Cocina" />
     </div>
   </section>
 
@@ -247,6 +251,7 @@
   </script>
 </body>
 </html>
+
 
 
 
