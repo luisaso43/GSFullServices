@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
   <title>GS Full Services - Contractor Work</title>
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-572-designer.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/templatemo-572-designer.css" />
+  <link rel="stylesheet" href="assets/css/owl.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <style>
     :root {
       --navy: #0a1d3a;
@@ -72,57 +71,118 @@
       padding-top: 60px;
     }
 
-    .gallery-img {
+    /* Proyectos centrados y moderno */
+    #projects .project-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    #projects .project-item {
+      background: #f8f9fa;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgb(10 29 58 / 0.1);
       width: 100%;
-      max-width: 400px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .gallery-img:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery-caption {
       text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    #projects .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgb(10 29 58 / 0.2);
+    }
+
+    #projects .project-item h4 {
+      margin-bottom: 0.3rem;
+      color: var(--navy);
+    }
+
+    #projects .project-item .date-location {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.7rem;
       font-weight: 500;
-      margin-bottom: 40px;
+    }
+
+    #projects .project-item p.description {
+      font-style: italic;
       color: #333;
+      margin: 0;
     }
 
-    .project-box {
+    /* Galería */
+    #gallery {
+      scroll-margin-top: 100px;
+      padding: 60px 0;
+      background-color: #f1f5f9;
+    }
+
+    #gallery .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgb(10 29 58 / 0.1);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+      background: white;
+    }
+
+    #gallery .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgb(10 29 58 / 0.25);
+    }
+
+    #gallery .gallery-item img {
+      width: 100%;
+      display: block;
+      border-radius: 8px 8px 0 0;
+    }
+
+    #gallery .caption {
+      padding: 0.75rem 1rem;
       text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .project-box h4 {
-      margin-top: 20px;
       font-weight: 600;
       color: var(--navy);
+      background-color: #ffffffdd;
+      border-radius: 0 0 8px 8px;
+      user-select: none;
+    }
+
+    /* Ajustes para navbar */
+    .navbar-nav .nav-link.active {
+      font-weight: 700;
+      color: var(--navy) !important;
     }
   </style>
 </head>
 <body>
-
 <header id="top">
   <nav class="main-navigation navbar navbar-expand-lg navbar-light transparent">
     <div class="container">
       <a class="navbar-brand" href="#top">GSFULLSERVICES</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#top">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
-        </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/gsfullservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-              <i class="fab fa-instagram" style="font-size: 1.2rem; color: var(--navy);"></i>
-            </a>
+            <a class="nav-link active" href="#top">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galería</a>
           </li>
         </ul>
       </div>
@@ -158,56 +218,68 @@
 
 <section id="projects" class="py-5">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2>Proyectos <em>Recientes</em></h2>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-4 project-box">
+    <h2 class="text-center mb-5"><em>Proyectos Recientes</em></h2>
+    <div class="project-list">
+      <div class="project-item">
         <h4>Remodelación de Consultorio</h4>
-        <p>Mayo 2025</p>
+        <div class="date-location">Mayo 2025 - Proyecto en Coral Gables, FL</div>
+        <p class="description">Renovación completa del consultorio médico, incluyendo nuevas instalaciones eléctricas, pintura y pisos laminados de alta resistencia.</p>
       </div>
-      <div class="col-md-4 project-box">
+      <div class="project-item">
         <h4>Remodelación de Cocina</h4>
-        <p>Marzo 2025</p>
+        <div class="date-location">Marzo 2025 - Proyecto en Miami, FL</div>
+        <p class="description">Modernización total con gabinetes personalizados, encimeras de cuarzo y actualización de sistemas eléctricos.</p>
       </div>
-      <div class="col-md-4 project-box">
+      <div class="project-item">
         <h4>Remodelación de Baño</h4>
-        <p>Marzo 2025</p>
+        <div class="date-location">Marzo 2025 - Proyecto en Hialeah, FL</div>
+        <p class="description">Reestructuración y diseño nuevo de baño, instalación de azulejos, accesorios y mejoras en plomería.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="gallery" class="py-5 bg-light">
+<section id="gallery" class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <h2><em>Galería</em> de Trabajos</h2>
+      <h2>Galería <em>de Trabajos</em></h2>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <img src="assets/images/project-1.jpeg" alt="Remodelación de Cocina" class="gallery-img">
-        <div class="gallery-caption">Remodelación de Cocina</div>
+    <div class="row g-4">
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/project-1.jpeg" alt="Remodelación de Cocina" />
+        <div class="caption">Remodelación de Cocina</div>
       </div>
-      <div class="col-md-4">
-        <img src="assets/images/gallery-2.jpeg" alt="Trabajo 2" class="gallery-img">
-        <div class="gallery-caption">Título del trabajo</div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/project-2.jpeg" alt="Renovación de Baño" />
+        <div class="caption">Renovación de Baño</div>
       </div>
-      <div class="col-md-4">
-        <img src="assets/images/gallery-3.jpeg" alt="Trabajo 3" class="gallery-img">
-        <div class="gallery-caption">Título del trabajo</div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/project-3.jpeg" alt="Instalación de Pisos Laminados" />
+        <div class="caption">Instalación de Pisos Laminados</div>
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/project-4.jpeg" alt="Ensamblaje de Muebles" />
+        <div class="caption">Ensamblaje de Muebles</div>
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/project-5.jpeg" alt="Trabajo de Drywall" />
+        <div class="caption">Trabajo de Drywall</div>
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="assets/images/project-6.jpeg" alt="Servicios de Handyman" />
+        <div class="caption">Servicios de Handyman</div>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <p>Contáctanos al <strong>(954) 520-9281</strong></p>
-        <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
-      </div>
-    </div>
+<footer class="py-4">
+  <div class="container text-center">
+    <p>Contáctanos al <strong>(954) 520-9281</strong></p>
+    <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
+    <a href="https://www.instagram.com/gsfullservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" style="color: var(--navy); font-weight: 600; text-decoration: none;">
+      Instagram
+    </a>
   </div>
 </footer>
 
@@ -219,6 +291,10 @@
 <script src="assets/js/popup.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
+  setTimeout(function () {
+    $('.loader').fadeToggle();
+  }, 1500);
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -237,11 +313,7 @@
     }
   });
 </script>
-
 </body>
 </html>
-
-
-
 
 
