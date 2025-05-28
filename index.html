@@ -247,27 +247,12 @@
       <div class="project-item">
         <h4>Remodelación de Cocina</h4>
         <div class="date-location">Marzo 2025 - Miami, FL</div>
-        <p class="description">Actualización integral con nuevos gabinetes, instalación de drywall, plomería y pintura para una cocina moderna y funcional.</p>
+        <p class="description">Modernización total con gabinetes personalizados, encimeras de cuarzo y actualización de sistemas eléctricos.</p>
       </div>
       <div class="project-item">
         <h4>Remodelación de Baño</h4>
-        <div class="date-location">Enero 2025 - Miami, FL</div>
-        <p class="description">Transformación completa con instalación de nuevas tuberías, pintura y acabados en cerámica para un baño elegante y duradero.</p>
-      </div>
-      <div class="project-item">
-        <h4>Remodelación de Cuarto</h4>
-        <div class="date-location">Diciembre 2024 - Miami, FL</div>
-        <p class="description">Reparación de drywall, pintura y actualización de luminarias para un ambiente renovado y acogedor.</p>
-      </div>
-      <div class="project-item">
-        <h4>Ensamblaje de Muebles</h4>
-        <div class="date-location">Noviembre 2024 - Miami, FL</div>
-        <p class="description">Montaje profesional de muebles de oficina y hogar con alta precisión y cuidado en cada detalle.</p>
-      </div>
-      <div class="project-item">
-        <h4>Pisos Laminados</h4>
-        <div class="date-location">Octubre 2024 - Miami, FL</div>
-        <p class="description">Instalación de pisos laminados resistentes y estéticos para mejorar la apariencia y funcionalidad de los espacios.</p>
+        <div class="date-location">Marzo 2025 - Miami, FL</div>
+        <p class="description">Reestructuración y diseño nuevo de baño, instalación de azulejos, accesorios y mejoras en plomería.</p>
       </div>
     </div>
   </div>
@@ -275,31 +260,21 @@
 
 <section id="gallery" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-5"><em>Galería de Trabajos</em></h2>
+    <div class="text-center mb-5">
+      <h2>Galería <em>de Trabajos</em></h2>
+    </div>
     <div class="row g-4">
       <div class="col-md-4 gallery-item">
         <img src="assets/images/gallery-1.jpeg" alt="Trabajo 1" />
-        <div class="caption">Remodelación Consultorio</div>
+        <div class="caption">Título del trabajo</div>
       </div>
       <div class="col-md-4 gallery-item">
         <img src="assets/images/gallery-2.jpeg" alt="Trabajo 2" />
-        <div class="caption">Remodelación Cocina</div>
+        <div class="caption">Título del trabajo</div>
       </div>
       <div class="col-md-4 gallery-item">
         <img src="assets/images/gallery-3.jpeg" alt="Trabajo 3" />
-        <div class="caption">Remodelación Baño</div>
-      </div>
-      <div class="col-md-4 gallery-item">
-        <img src="assets/images/gallery-4.jpeg" alt="Trabajo 4" />
-        <div class="caption">Remodelación Cuarto</div>
-      </div>
-      <div class="col-md-4 gallery-item">
-        <img src="assets/images/gallery-5.jpeg" alt="Trabajo 5" />
-        <div class="caption">Ensamblaje de Muebles</div>
-      </div>
-      <div class="col-md-4 gallery-item">
-        <img src="assets/images/gallery-6.jpeg" alt="Trabajo 6" />
-        <div class="caption">Instalación de Pisos Laminados</div>
+        <div class="caption">Título del trabajo</div>
       </div>
     </div>
   </div>
@@ -307,34 +282,47 @@
 
 <footer class="py-4 text-center">
   <div class="container">
-    <p>© 2025 GS Full Services. Todos los derechos reservados.</p>
-    <a href="https://instagram.com/gsfullservices" target="_blank" class="instagram-link" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i> Síguenos en Instagram
+    <p>Contáctanos al <strong>(954) 520-9281</strong></p>
+    <p>&copy; 2025 GS Full Services. Todos los derechos reservados.</p>
+    <a class="instagram-link" href="https://www.instagram.com/gsfullservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram GS Full Services">
+      <i class="fab fa-instagram" style="font-size: 1.4rem;"></i> Síguenos en Instagram
     </a>
   </div>
 </footer>
 
+<script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a6f41686d6.js" crossorigin="anonymous"></script>
-<script src="assets/js/owl.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/animation.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
 <script src="assets/js/custom.js"></script>
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script>
-  // Cambio navbar al hacer scroll
-  const nav = document.querySelector('.main-navigation');
+  // Cambiar fondo navbar al hacer scroll
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    const nav = document.querySelector('.main-navigation');
+    if(window.scrollY > 10) {
       nav.classList.remove('transparent');
       nav.classList.add('solid');
     } else {
-      nav.classList.remove('solid');
       nav.classList.add('transparent');
+      nav.classList.remove('solid');
     }
+  });
+
+  // Scroll suave para enlaces ancla
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if(target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 </script>
 </body>
 </html>
+
 
 
